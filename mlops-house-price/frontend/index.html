@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction | ML Project</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2>🏠 HousePrice AI</h2>
+        <span>Machine Learning Project</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="tag">AI-POWERED ESTIMATION</p>
+            <h1>Find Your Home's Estimated Value</h1>
+            <p>Enter your property details to estimate its price
+               using our machine learning model.</p>
+        </section>
+
+        <section class="prediction-card">
+            <h2>Property Details</h2>
+            <p class="muted">Enter the required information below.</p>
+
+            <form id="prediction-form">
+                <label for="area">Area (square feet)</label>
+                <input id="area" name="area" type="number"
+                       min="1" placeholder="e.g. 1500" required>
+
+                <label for="bedrooms">Bedrooms</label>
+                <input id="bedrooms" name="bedrooms" type="number"
+                       min="0" placeholder="e.g. 3" required>
+
+                <label for="bathrooms">Bathrooms</label>
+                <input id="bathrooms" name="bathrooms" type="number"
+                       min="0" placeholder="e.g. 2" required>
+
+                <label for="age">Age of House (years)</label>
+                <input id="age" name="age" type="number"
+                       min="0" max="200" placeholder="e.g. 5" required>
+
+                <button type="submit" id="predict-button">
+                    Predict House Price
+                </button>
+            </form>
+
+            <div id="result" class="result" aria-live="polite">
+                Your prediction will appear here.
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        HousePrice AI · Built with HTML, CSS, JavaScript & Machine Learning
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
